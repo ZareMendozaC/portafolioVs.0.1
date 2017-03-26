@@ -445,7 +445,11 @@ a:hover {
 }
 .particles-js-canvas-el {
  position: absolute;
-  top: 0px; }
+  top: 0px; 
+  left: 0px;
+  height: 60% !important;
+}
+
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
