@@ -77,7 +77,6 @@
 
 /* Default styles
 /* ---------------------------------------------- */
-
 body {
     width: 100%;
     height: 100%;
@@ -175,7 +174,7 @@ a:hover {
 }
 
 .content-section {
-    padding: 150px 0;
+    padding: 100px 0;
 }
 
 .content-section h1 {
@@ -488,7 +487,9 @@ a:hover {
 #about {
     width: 100%;
     color: #fff;
-    background: url(../images/about_bg.jpg) no-repeat bottom center scroll #376dac;
+   /* background: url(../images/about_bg.jpg) no-repeat bottom center scroll #376dac;
+   background-color: #6adbd9;*/
+   background-color: #3b90be;
     -webkit-background-size: cover; /* For WebKit*/
        -moz-background-size: cover; /* Mozilla*/
          -o-background-size: cover; /* Opera*/
@@ -496,63 +497,7 @@ a:hover {
 }
 
 .content-section {
-    padding: 150px 0;
-}
-
-.more-about-website {
-    display: none;
-    padding: 0px 0;
-}
-
-.more-about-website .segment {
-    display: none;
-}
-
-.more-about-website p {
-    padding: 10px 0 0 0;
-    font-size: 16px;
-}
-
-.more-about-website .awards {
-    margin-top: 20px;
-}
-
-.awards ul {
-    list-style: none;
-    margin: 20px 0;
-    padding: 0;
-}
-
-.awards ul li {
-    display: inline-block;
-    font-weight: bold;
-    margin: 15px 10px;
-    line-height: 20px;
-}
-
-.awards ul li span,
-.awards ul li span i {
-    font-weight: normal;
-    display: block;
-}
-
-.awards ul li a:link,
-.awards ul li a:visited {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    display: block;
-    color: #fff;
-    text-align: center;
-}
-
-.awards ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.awards ul li a img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 100px 0;
 }
 
 .the-quote {
@@ -563,9 +508,18 @@ a:hover {
     font-size: 28px;
     font-style: italic;
     line-height: 32px;
-    color: #99c2f9;
+    color: #cafcfb;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
+.avatar { 
+  width: auto;
+  height: 250px;
+  border-radius: 50%;
+
+  }
+  .img-responsive{
+    margin: 0 auto;
+  }
 /* Portfolio
 /* ---------------------------------------------- */
 
@@ -757,36 +711,6 @@ a.portfolio-more.expanded {
     padding-top: 25px;
 }
 
-/*.freebie{
-    position: relative;
-    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: #FE524C;
-    top: 0px;
-    right: 0px;
-    z-index: 999;
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-}
-
-.freebie:after{
-    position: absolute;
-    content: "";
-    border-width: 0 100px 100px 0;
-    border-style: solid;
-    border-color: #fff #fff transparent transparent;
-    top: 0px;
-    right: 0px;
-    z-index: -2;
-    -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-}*/
 
 .showcase-desc p{
     margin: 0;
@@ -798,9 +722,8 @@ a.portfolio-more.expanded {
 /* ---------------------------------------------- */
 
 #skills {
-    background: #F06060;
+    background: #3a75bc;
     width: 100%;
-    color: #fff;
     position: relative;
 }
 
@@ -811,7 +734,7 @@ a.portfolio-more.expanded {
     top: -36px;
     width: 100%;
     height: 75px;
-    background: #F06060;
+    background: #3a75bc;
     -webkit-transform: skewY(-2.5deg);
     -moz-transform: skewY(-2.5deg);
     -ms-transform: skewY(-2.5deg);
@@ -901,7 +824,7 @@ figure.skill-set figcaption h4 {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../images/contact_bg3.png) no-repeat bottom left scroll #FFDB4F;
+    background-color: #9aecea;
     position: relative;
 }
 
@@ -912,7 +835,7 @@ figure.skill-set figcaption h4 {
     top: -36px;
     width: 100%;
     height: 75px;
-    background: #FFDB4F;
+    background: #9aecea;
     -webkit-transform: skewY(2.5deg);
     -moz-transform: skewY(2.5deg);
     -ms-transform: skewY(2.5deg);
@@ -972,7 +895,7 @@ figure.skill-set figcaption h4 {
     font-size: 20px;
     background: none;
     border: 0;
-    border-bottom: 1px solid #fcad26;
+    border-bottom: 1px solid #002b50;
     color: #333;
     box-shadow: none;
     outline: none;
@@ -983,21 +906,21 @@ figure.skill-set figcaption h4 {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-bottom: 1px solid #3A75BC;
+    border-bottom: 1px solid c;
     -webkit-transition: border-width 0.1s ease-in-out;
     -moz-transition: border-width 0.1s ease-in-out;
     transition: border-width 0.1s ease-in-out;
 }
 
 .form-group textarea:focus {
-    border: 1px solid #3A75BC;
+    border: 1px solid #002b50;
 }
 
 .form-group textarea {
     min-height: 195px;
     margin: 45px 0 0 0;
     padding: 0px;
-    border: 1px solid #fcad26;
+    border: 1px solid #002b50;
 }
 
 .form-group label {
@@ -1513,7 +1436,7 @@ footer .copyrights p {
     }*/
 
     .intro {
-        background: url(../images/cover_mobile.jpg) no-repeat bottom center scroll;
+        background: url(http://www.fondox.net/wallpapers/el-mar-y-nubes-de-azul-374.jpg) no-repeat bottom center scroll;
         -webkit-background-size: cover;
            -moz-background-size: cover;
              -o-background-size: cover;
@@ -1521,12 +1444,18 @@ footer .copyrights p {
     }
 
     #about {
-        background: url(../images/about_bg_xs.jpg) no-repeat bottom center scroll;
+        background-color: #069ab9;
         -webkit-background-size: cover;
            -moz-background-size: cover;
              -o-background-size: cover;
                 background-size: cover;
     }
+    .particles-js-canvas-el {
+        position: absolute;
+        top: 0px; 
+        left: 0px;
+        height: 40% !important;
+}
     #portfolio .portfolio-item-block,
     a.portfolio-more,
     .more-projects ul li,
