@@ -20,23 +20,7 @@
     <!-- The Favicons -->
     <link rel="shortcut icon" href="images/icons/favicon.ico">
     <link rel="icon" sizes="16x16 32x32 64x64" href="images/icons/favicon.ico">
-    <link rel="icon" type="image/png" sizes="196x196" href="images/icons/favicon-192.png">
-    <link rel="icon" type="image/png" sizes="160x160" href="images/icons/favicon-160.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="images/icons/favicon-64.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16.png">
     
-    <link rel="apple-touch-icon" href="images/icons/favicon-57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/icons/favicon-144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/icons/favicon-60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/icons/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/icons/favicon-76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/favicon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/favicon-180.png">
-
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="images/icons/favicon-144.png">
     <meta name="msapplication-config" content="images/icons/browserconfig.xml">
@@ -283,66 +267,39 @@
                 <h1 class="white">Skills</h1>
                 <p class="caption white" data-sr="enter bottom">Me gusta el desarrollo front-end centrado en la simplicidad y que se ajuste <br />al diseño responsive.</p>
                 <div class="row">
+                   <div id="app">
+    
+    <component :is="state.view">
+        <h1>{{ state.view }}</h1>
+    </component>
+    <controls></controls>
+</div>
 
-                    <div class="col-md-4">
-                        <figure class="skill-set" data-sr="wait 0.6s, enter right">
-                            <img src="images/responsive.png" class="img-responsive" alt="Responsive web design" title="Responsive web design">
-                            <figcaption>
-                                <h4>Responsive web design, Mobile app design &amp; Web Applications</h4>
-                            </figcaption>
-                        </figure>
-                    </div>
+<!-- Controls -->
+<template id="controls">
+    <ul class="controls">
+        <li v-for="(animation, index) in state.animations" @click.prevent="setView(animation)" v-bind:class="{ 'active': animation === state.view }">
+            {{ animation }}
+        </li>
+    </ul>
+</template>
 
-                    <div class="col-md-4">
-                        <figure class="skill-set" data-sr="wait 0.4s, enter top">
-                            <img src="images/frontend.png" class="img-responsive" alt="Front-end development" title="Front-end development">
-                            <figcaption>
-                                <h4>Front-end development</h4>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div class="col-md-4">
-                        <figure class="skill-set" data-sr="wait 0.6s, enter left">
-                            <img src="images/backend.png" class="img-responsive" alt="Back-end development" title="Back-end development">
-                            <figcaption>
-                                <h4>Back-end development</h4>
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                </div><!-- /.row -->
-
-                <div class="row">
-                <div class="col-md-8">
-
-                        <div class="technologies">
-                                <h3>Technologies &amp; Languages</h3>
-                                <ul>
-                                    <li class="col-md-3" data-sr='wait 0.2s, scale up 30%, hustle 20%'><h5><i class="fa fa-html5 fa-3x"></i> HTML 5</h5><span class="xs italic">Bootstrap, Foundation</span></li>
-                                    <li class="col-md-3" data-sr='wait 0.3s, scale up 25%, hustle 20%'><h5><i class="fa fa-css3 fa-3x"></i> CSS3</h5><span class="xs italic">Sass, LESS, Animations</span></li>
-                                    <li class="col-md-3" data-sr='wait 0.4s, scale up 20%, hustle 20%'><h5><i class="fa fa-file-code-o fa-3x"></i> JavaScript </h5><span class="xs italic">Ajax, JSON, jQuery</span></li>
-                                    <li class="col-md-3" data-sr='wait 0.5s, scale up 15%, hustle 20%'><h5><i class="fa fa-cogs fa-3x"></i> PHP &amp; MySQL</h5><span class="xs italic">Wordpress, CodeIgniter</span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="core-skills">
-                                <h3>Core Skills</h3>
-                                <ul>
-                                    <li data-sr='wait 0.2s, enter top'><i class="fa fa-binoculars fa-fw"></i> Research</li>
-                                    <li data-sr='wait 0.3s, enter top'><i class="fa fa-cubes fa-fw"></i> Information architecture</li>
-                                    <li data-sr='wait 0.4s, enter top'><i class="fa fa-group fa-fw"></i> User experience design</li>
-                                    <li data-sr='wait 0.5s, enter top'><i class="fa fa-paint-brush fa-fw"></i> Visual design</li>
-                                    <li data-sr='wait 0.6s, enter top'><i class="fa fa-code fa-fw"></i> Code</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                </div><!-- /.row -->
-
+<!-- Transitions -->
+<template id="page">
+    <transition 
+        v-on:enter="enter" 
+        v-on:leave="leave"
+        v-bind:css="false"
+        appear
+    >
+        <div class="page" v-bind:class="state.view">
+            <div class="center">
+                <slot></slot>
             </div>
+        </div>
+    </transition>
+</template>
+                </div>
         </div>
     </section>
 
@@ -953,6 +910,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
 
     <!-- Plugin JavaScript -->
     <script src="js/plugins/pace.min.js"></script>

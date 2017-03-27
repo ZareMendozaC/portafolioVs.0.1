@@ -486,10 +486,10 @@ a:hover {
 
 #about {
     width: 100%;
-    color: #fff;
-    background: url(http://wallpapercave.com/wp/jSLNscz.jpg) no-repeat bottom center scroll #376dac;
- 
-   /*background-color: #3b90be;*/
+    color: white;
+     background: url(http://wallpapercave.com/wp/jSLNscz.jpg) no-repeat bottom center scroll #376dac;
+
+    /*background-color: #2f79a6; */
     -webkit-background-size: cover; /* For WebKit*/
        -moz-background-size: cover; /* Mozilla*/
          -o-background-size: cover; /* Opera*/
@@ -826,7 +826,7 @@ figure.skill-set figcaption h4 {
     color: #fff;
     /*background: url(../images/fondoAbout.jpg) no-repeat bottom center scroll #376dac;*/
     
-    background-color: #cafcfb;
+    background-color: #a3ccea;
     position: relative;
 }
 
@@ -837,7 +837,7 @@ figure.skill-set figcaption h4 {
     top: -36px;
     width: 100%;
     height: 75px;
-    background: #cafcfb;
+    background: #a3ccea;
     -webkit-transform: skewY(2.5deg);
     -moz-transform: skewY(2.5deg);
     -ms-transform: skewY(2.5deg);
