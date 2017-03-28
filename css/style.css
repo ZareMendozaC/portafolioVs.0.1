@@ -487,7 +487,7 @@ a:hover {
 #about {
     width: 100%;
     color: white;
-     background: url(http://wallpapercave.com/wp/jSLNscz.jpg) no-repeat bottom center scroll #376dac;
+    background: url(../images/fondoAbout4.jpg) no-repeat bottom center scroll #376dac;
 
     /*background-color: #2f79a6; */
     -webkit-background-size: cover; /* For WebKit*/
@@ -495,7 +495,12 @@ a:hover {
          -o-background-size: cover; /* Opera*/
             background-size: cover; /* Generic*/
 }
+.description{
+    background-color: rgba(58,117,188,0.9);
+    padding: 50px 25px;
+    border-radius: 20px;
 
+}
 .content-section {
     padding: 100px 0;
 }
@@ -503,19 +508,18 @@ a:hover {
 .the-quote {
     padding: 40px 0;
 }
-
+.caption{
+    color: #3a75bc;
+}
 .the-quote p {
     font-size: 28px;
     font-style: italic;
     line-height: 32px;
-    color: #cafcfb;
+    color: #3a75bc;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 .avatar { 
-  width: auto;
-  height: 250px;
-  border-radius: 50%;
-
+  width: 400px;
   }
   .img-responsive{
     margin: 0 auto;
@@ -824,25 +828,40 @@ figure.skill-set figcaption h4 {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    /*background: url(../images/fondoAbout.jpg) no-repeat bottom center scroll #376dac;*/
+    /**/
     
-    background-color: #a3ccea;
     position: relative;
+
+     background: url(../images/fondoAbout4.jpg) no-repeat bottom center scroll #376dac;
+
+    /*background-color: #2f79a6; */
+    -webkit-background-size: cover; /* For WebKit*/
+       -moz-background-size: cover; /* Mozilla*/
+         -o-background-size: cover; /* Opera*/
+            background-size: cover; /* Generic*/
 }
 
 #contact:before {
-    content: '';
+   content: '';
     position: absolute;
     left: 0;
     top: -36px;
     width: 100%;
     height: 75px;
-    background: #a3ccea;
+    background: #ECF0F1;/* Backup */
+    background: #FFF;
     -webkit-transform: skewY(2.5deg);
-    -moz-transform: skewY(2.5deg);
-    -ms-transform: skewY(2.5deg);
-    -o-transform: skewY(2.5deg);
-    transform: skewY(2.5deg);
+       -moz-transform: skewY(2.5deg);
+        -ms-transform: skewY(2.5deg);
+         -o-transform: skewY(2.5deg);
+            transform: skewY(2.5deg);
+     background: url(../images/fondoAbout4.jpg) no-repeat top center;
+
+    /*background-color: #2f79a6; */
+    -webkit-background-size: cover; /* For WebKit*/
+       -moz-background-size: cover; /* Mozilla*/
+         -o-background-size: cover; /* Opera*/
+            background-size: cover; /* Generic*/
 }
 
 .contact-info ul {
@@ -1408,6 +1427,11 @@ footer .copyrights p {
 /* ---------------------------------------------- */
 /* Media Queries [min-width:767px]
 /* ---------------------------------------------- */
+@media(min-width: 360px) and (max-width: 1024px){
+     #contact:before {
+       display: none;
+    }
+}
 
 @media(min-width:767px) {
     .showcase{
